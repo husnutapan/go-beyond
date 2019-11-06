@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type deck []string
 
@@ -22,4 +25,11 @@ func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i, card)
 	}
+}
+
+func (d deck) upperCase() deck {
+	for i, card := range d {
+		d[i] = strings.ToUpper(card)
+	}
+	return d
 }
