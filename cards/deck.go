@@ -27,9 +27,17 @@ func (d deck) print() {
 	}
 }
 
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
+
 func (d deck) upperCase() deck {
 	for i, card := range d {
 		d[i] = strings.ToUpper(card)
 	}
 	return d
+}
+
+func (d deck) toString() string {
+	return strings.Join(d, ",")
 }
