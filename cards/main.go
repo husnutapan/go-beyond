@@ -11,4 +11,10 @@ func main() {
 	hand.print()
 	remainingCards.print()
 	fmt.Println(cards.toString())
+	//save data to file with byte array
+	cards.saveToFile("my_memory_cards.txt")
+
+	fromFileDeck := newDeckFromFile("my_memory_cards.txt")
+	fromFileDeck.print()
+
 }
