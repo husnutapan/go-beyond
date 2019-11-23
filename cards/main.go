@@ -1,9 +1,7 @@
 package main
 
-import "fmt"
-
 func main() {
-	cards := newDeck()
+	/*cards := newDeck()
 	cards.print()
 	cards.upperCase()
 	cards.print()
@@ -15,6 +13,10 @@ func main() {
 	cards.saveToFile("my_memory_cards.txt")
 
 	fromFileDeck := newDeckFromFile("my_memory_cards.txt")
-	fromFileDeck.print()
+	fromFileDeck.print()*/
+
+	cards := newDeck()
+	cards.suffle()
+	cards.print()
 
 }
